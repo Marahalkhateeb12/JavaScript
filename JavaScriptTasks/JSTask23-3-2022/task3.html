@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task #3</title>
+</head>
+<body>
+    <select id="sel" onchange="changeImg()">
+        <option>Jordan</option>
+        <option>Palestine</option>
+        <option>Iraq</option>
+        <option>Egypt</option>
+        <option>Saudi Arabia</option>
+    </select>
+    <br>
+    <img id="img" src="img/no.jfif"  width: 200px; height: 200px;>
+<script>
+    function changeImg(){
+        let value=document.getElementById('sel').value;
+        if(value=="Jordan")
+        {
+            document.getElementById('img').setAttribute('src','img/jordan.jfif');
+        }
+        else  if(value=="Palestine")
+        {
+            document.getElementById('img').setAttribute('src','img/palestine.jfif');
+        }
+        else if(value=="Iraq")
+        {
+            document.getElementById('img').setAttribute('src','img/iraq.png');
+        }
+        else if(value=="Egypt")
+        {
+            document.getElementById('img').setAttribute('src','img/egypt.jfif');
+        }
+        else if(value=="Saudi Arabia")
+        {
+            document.getElementById('img').setAttribute('src','img/saudi.gif');
+        }
+    }
+</script>
+    
+</body>
+</html>

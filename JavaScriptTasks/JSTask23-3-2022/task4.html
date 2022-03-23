@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task #4</title>
+</head>
+<body>
+    <form>
+        <select id="font" onchange="changeFont()">
+            <option>Gill Sans</option>
+            <option>Georgia</option>
+            <option>Cursive</option>
+            <option>Sans Serif</option>
+        </select>
+        <select id="size" onchange="changeSize()">
+            <option>12px</option>
+            <option>20px</option>
+            <option>40px</option>
+            <option>70px</option>
+        </select>
+        <input type="checkbox" id="italic" onclick="italictxt()" >Italic
+        <input type="checkbox" id="Bold" onclick="bold()" >Bold
+        <input type="checkbox" id="underline" onclick="underlinetxt()" >Underline
+    </form>
+    <div id="text" style="border: 1px solid black; width: 900px; height: 200px; ">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+
+    <script>
+        function changeFont(){
+            let value=document.getElementById('font').value;
+        if(value=="Gill Sans")
+        {
+            document.getElementById('text').style.fontFamily='Gill Sans';
+        }
+        else  if(value=="Georgia")
+        {
+            document.getElementById('text').style.fontFamily='Georgia';
+        }
+        else if(value=="Cursive")
+        {
+            document.getElementById('text').style.fontFamily='cursive';
+        }
+        else if(value=="Sans Serif")
+        {
+            document.getElementById('text').style.fontFamily='sans-serif';
+        }
+        
+    }
+    function changeSize(){
+        let value=document.getElementById('size').value;
+        if(value=="12px")
+        {
+            document.getElementById('text').style.fontSize='12px';
+        }
+        else  if(value=="20px")
+        {
+            document.getElementById('text').style.fontSize='20px';
+        }
+        else if(value=="40px")
+        {
+            document.getElementById('text').style.fontSize='40px';
+        }
+        else if(value=="70px")
+        {
+            document.getElementById('text').style.fontSize='70px';
+        }
+    }
+       function italictxt(){
+        var checkBox = document.getElementById("italic");
+        if (checkBox.checked == true){
+               document.getElementById('text').style.fontStyle = "italic";
+        }
+        else
+        document.getElementById('text').style.fontStyle = "normal";
+       } 
+       function bold(){
+        var checkBox = document.getElementById("Bold");
+        if (checkBox.checked == true){
+               document.getElementById('text').style.fontWeight = "bold";
+        }
+        else
+        document.getElementById('text').style.fontWeight = "normal";
+       } 
+       function underlinetxt(){
+        var checkBox = document.getElementById("underline");
+        if (checkBox.checked == true){
+               document.getElementById('text').style.textDecoration = 'underline';
+        }
+        else
+        document.getElementById('text').style.textDecoration = 'none';
+       } 
+    </script>
+</body>
+</html>

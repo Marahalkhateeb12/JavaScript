@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task #5</title>
+</head>
+<body>
+    <form>
+        Password(min 6 charachter):<input type="password" id="pass" onchange="checkPass()"><span id="pas"></span><br>
+        repeat password: <input type="password" id="repass" onchange="rePass()" ><span id="rep"></span><br>
+        <button id="btn" style="visibility: hidden; " value="submit">Submit</button>
+    </form>
+    <script>
+        function checkPass(){
+            value=document.getElementById('pass').value;
+            if(value.length<6){
+                document.getElementById('pas').innerHTML='Too short';
+                document.getElementById('pas').style.color='red';
+            }
+            else if(value.length>=6){
+                document.getElementById('pas').innerHTML="";
+            }
+        }
+        function rePass(){
+            repass=document.getElementById('repass').value;
+            pass=document.getElementById('pass').value;
+            if(pass==repass){
+                document.getElementById('rep').innerHTML="";
+                document.getElementById('btn').style.visibility='visible';
+            }
+            else
+            {
+                document.getElementById('rep').innerHTML='The two passwords didnt matchs';
+                document.getElementById('rep').style.color='red';
+
+
+            }
+        }
+    </script>
+</body>
+</html>
