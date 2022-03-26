@@ -53,9 +53,13 @@ function doubleNumbers(arr){
   */
   
   function capitalizeNames(arr){
-   
-    
+   for(i=0;i<arr.length;i++){
+      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+   }
+    return arr;
   }
+  document.write(`<br> <br> ex.3 <br> the capitalize of names ["john", "JACOB", "jinGleHeimer", "schmidt"] is ${capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"])}`);
+
    /* Exercise 4:  
    * 
    * Make an array of the names in h1s, and the ages in h2s
@@ -93,11 +97,38 @@ function doubleNumbers(arr){
    * "<h1>Kayne West</h1><h2>16</h2>", 
    * "<h1>Bob Ziroll</h1><h2>100</h2>"]
    */
-  
+
+   document.write(`<br> <br> ex.4 <br>`);
   function readyToPutInTheDOM(arr){
-    // your code here
+    for(i=0;i<arr.length;i++){
+document.write('<h1>'+arr[i].name+'</h1>');
+document.write('<h2>'+arr[i].age+'</h2>');
+
+    }
+    return '';
   }
-  
+  document.write(readyToPutInTheDOM([
+      {
+          name: "Angelina Jolie",
+          age: 80
+      },
+      {
+          name: "Eric Jones",
+          age: 2
+      },
+      {
+          name: "Paris Hilton",
+          age: 5
+      },
+      {
+         name: "Kayne West",
+          age: 16
+      },
+      {
+          name: "Bob Ziroll",
+         age: 100
+     }
+    ]));
   
   
   
@@ -115,8 +146,14 @@ function doubleNumbers(arr){
   */
   
   function doubleValues(arr){
-      // your code here
+   for(i = 0; i < arr.length ; i++){
+      arr[i] = arr[i] * 2;
     }
+
+    return arr;
+}
+document.write(`<br> <br> ex.5 <br>The double of this Values[1,2,3] is ${doubleValues([1,2,3]) }`);
+document.write(`<br>The double of this Values [1,-2,-3] is ${doubleValues([1,-2,-3]) }`);
     
     /*
     * Exercise 6:
@@ -133,10 +170,15 @@ function doubleNumbers(arr){
     */
     
     function valTimesIndex(arr){
-       // your code here   
+      for(i = 0; i < arr.length ; i++){
+         arr[i] = arr[i] * i;
+       }
+   
+       return arr;   
       
     }
-    
+    document.write(`<br> <br> ex.6 <br>The value multiplied by the index [1,2,3] is ${valTimesIndex([1,2,3]) }`);
+document.write(`<br>The value multiplied by the index [1,-2,-3] is ${valTimesIndex([1,-2,-3]) }`);
     /*
     * Exercise 7:
     * Write a function called extractKey which accepts an array of objects and some key and returns a new array with the value
@@ -150,8 +192,18 @@ function doubleNumbers(arr){
     */
     
     function extractKey(arr, key){
-       // your code here 
+         names = [];
+
+        for ( i = 0; i < arr.length; i++) {
+            if (!arr[i].hasOwnProperty(key)) {
+                continue;
+            }
+        
+            names.push(arr[i].name);
+        }
+        return names;
     }
+    document.write(`<br> <br> ex.7 <br>The values of key (name) is ${ extractKey([{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}], 'name') }`);
     
     /*
     * Exercise 8:
@@ -161,6 +213,17 @@ function doubleNumbers(arr){
     * extractFullName([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia"}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele"}]) // ['Elie Schoppik', 'Tim Garcia', 'Matt Lane', 'Colt Steele']
     */
     
-   function extractFullName(){
-      // your code here 
+   function extractFullName(arr){
+     fullnames = [];
+
+for (let i = 0; i < arr.length; i++) {
+    if (!arr[i].hasOwnProperty('first') && !arr[i].hasOwnProperty('last')) {
+        continue;
+    }
+
+    fullnames.push(arr[i].first+' '+arr[i].last);
+}
+    return fullnames;
+     
    }
+   document.write(`<br> <br> ex.8 <br>The full name of [{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia"}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele"}] is ${ extractFullName([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia"}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele"}])}`);
