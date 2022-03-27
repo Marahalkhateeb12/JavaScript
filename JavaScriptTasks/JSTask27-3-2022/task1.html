@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="png/image" href="https://www.stickpng.com/assets/images/5847eb76cef1014c0b5e484f.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Personal Information</title>
+  <link rel="stylesheet" href="task.css">
+</head>
+
+<body>
+  
+  <form >
+   <fieldset style=" border: 2px dashed rgb(71, 24, 42);">
+     <legend>Personal Information:</legend>
+      <label>Name : </label><input type="text" placeholder="Enter your name" id="name"><br>
+      <label>Age : </label><input type="number" placeholder="Enter your age (number)" id="age"><br>
+      <label>Gender : </label><input type="radio" name="gender" id="male">Male
+      <input type="radio" name="gender" id="female">Female<br>
+      <label for="BD">Brief Description : </label><textarea placeholder="Enter deascription about yourself" id="BD"></textarea><br>
+      <label>University : </label><select id="uni">
+          <option>JUST</option>
+          <option>Yarmouk</option>
+          <option>BAU</option>
+          <option>University of Jordan</option>
+      </select><br>
+      <label>Major : </label><select id="major">
+        <option>Computer Science</option>
+        <option>Software Engineering </option>
+        <option>Computer Information System</option>
+        <option>Maths</option>
+        <option>English</option>
+    </select><br>
+    <label>Birth Date : </label><input type="date"  id="birthDate"><br>
+    <label>Progrmming Languages : </label><input type="checkbox"  id="Java">JAVA
+    <input type="checkbox"  id="c++">C++
+    <input type="checkbox"  id="c#">C#
+    <input type="checkbox"  id="python">Python <br>
+    <label>Your Image </label><input type="file" id="imgsrc" name="myImage" accept="image/png, image/gif, image/jpeg" onchange="readURL(this)"/><br>
+    
+    <label> Siblings Number  : </label><input type="number" placeholder="Enter your  siblings number " id="siblings"><br>
+    <input type="button" id="submit" onclick=" Submit()" value="Submit">
+  </fieldset>
+  </form>
+  <div class="container" id="con">
+    <div id="perInfo" class="card"></div>
+    <div id="about" class="card1"></div>
+    <div id="edu" class="card"></div>
+    <img id="img" class="card1" width="100px" height="100px">
+    </div>
+  <script src="task1.js"></script>
+</body>
+</html>

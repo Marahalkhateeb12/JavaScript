@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="png/image" href="https://www.stickpng.com/assets/images/5847eb76cef1014c0b5e484f.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Master Piece Information</title>
+  <link rel="stylesheet" href="task.css">
+</head>
+
+<body>
+  
+  <form >
+   <fieldset style=" border: 2px dashed rgb(71, 24, 42);">
+     <legend>Master Piece Information:</legend>
+      <label>Subject : </label><input type="text" placeholder="Enter your project name" id="pname"><br>
+      <label>Description : </label><textarea placeholder="Enter your project description" id="description"></textarea><br>
+     <label>User Types : </label><input type="checkbox"  id="customer">Customer
+    <input type="checkbox"  id="hallAdmins">Hall Admins
+    <input type="checkbox"  id="superAdmin">Super Admins
+    <input type="checkbox"  id="companyAdmin">Company Administrators<br>
+
+    <label>Technology Used : </label><input type="checkbox"  id="browser">Browsers
+    <input type="checkbox"  id="htmlCss">HTML&CSS
+    <input type="checkbox"  id="wdf">Web Development Frameworks
+    <input type="checkbox"  id="laravel">Laravel<br>
+
+    
+    <label>Image </label><input type="file" id="imgsrc" name="Image" accept="image/png, image/gif, image/jpeg" onchange="readURL(this)" /><br>
+    
+    <input type="button" id="submit" onclick=" Submit()" value="Submit">
+  </fieldset>
+  </form>
+  <div class="container" id="con">
+    <div id="pDes" class="card"></div>
+    <div id="Tech" class="card1"></div>
+    <div id="user" class="card"></div>
+    <img id="img" class="card1" width="100px" height="100px">
+    </div>
+  <script src="task2.js"></script>
+</body>
+</html>

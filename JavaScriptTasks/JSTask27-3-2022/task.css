@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left:200px;
+    margin-right:200px ;
+    margin-top: 50px;
+    visibility: hidden;
+}
+.card{
+    border: 2px dashed pink;
+    background-color: rgb(71, 24, 42);
+    color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card1{
+    border: 2px dashed rgb(71, 24, 42);
+    background-color:pink;
+    color:rgb(71, 24, 42);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+form{
+    margin-left: 200px;
+    margin-right:200px ;
+    background-color:pink;
+    color:rgb(71, 24, 42);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900px;
+    height: 300px;
+    justify-content: space-between;  
+
+}
+#submit{
+    color:pink;
+    background-color: rgb(71, 24, 42);
+}
