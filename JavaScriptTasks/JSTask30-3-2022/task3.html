@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Password validation</title>
+
+</head>
+<body >
+
+Input Password and Submit [1 to 8 characters which contain at least one numeric digit, one uppercase and one lowercase letter]
+<form >
+Password :<input type='password' id='pass'/></li>
+<input type="submit" name="submit" value="Submit" onclick="CheckPassword()"/>
+
+
+</form>
+
+<script>
+    function CheckPassword() 
+{ 
+var passRegEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,8}$/;
+if(document.getElementById('pass').value.match(passRegEx)) 
+{ 
+alert('Correct...');
+}
+else
+{ 
+alert('Wrong...!');
+}
+}
+</script>
+</body>
+</html>
